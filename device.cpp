@@ -97,7 +97,7 @@ int Device::disconnect(string connection, string netPass) {
 	// ensure connection is already made
 	for (int i = 0; i < holdableConnections; ++i) {
 		if (connectionIDs[i] == connection) {
-			connectionIDs[i] == "";
+			connectionIDs[i] = "";
 			return 0;
 		}
 	}
@@ -141,6 +141,7 @@ string Device::retrieve(string connection, string netPass) {
 	for (int i = 0; i < holdableConnections; ++i) {
 		if (connectionIDs[i] == connection) {
 			return outputBuffer; // successful retrieval
+			outputBuffer = inputBuffer;
 		}
 	}
 
@@ -209,3 +210,7 @@ string Device::generatePassword() {
 // ID Getter
 // so that other network devices can see this one
 string Device::getID() { return ID; }
+
+// Pass Getter
+// so that, in this simulator, device can use its own password in the connect call if needed
+string Device::getPass() { return password; }

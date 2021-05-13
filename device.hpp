@@ -22,6 +22,7 @@ public:
 
 	string initialSetup(string id, string netPass);
 	string getID();
+	string getPass();
 	int   connect(string pass, string netPass, string connection);
 	int   disconnect(string connection, string netPass);
 	int   send(string connection, string netPass, string data);
