@@ -9,22 +9,18 @@ This is a command line simulation and requires a C++ compiler to build and run.
 ---
 
 ## Setup
-** Version 1.0.0 **
+*** Version 1.0.0 ***
 
 To get a local repo of the project, run:
-
 git clone https://github.com/itseullman/cns-group-7.git
 
 To build the simulation, compile the following files with a C++ compiler:
-
 g++ simulation.cpp device.cpp
 
 Or:
-
 clang++ simulation.cpp device.cpp
 
 Finally, to start running the simulation, simply run the resulting executable, ie:
-
 ./a.out
 
 ## Usage
